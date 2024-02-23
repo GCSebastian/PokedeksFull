@@ -1,20 +1,57 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<div class="all">
+  <div class="header">
+    <div class="headerUp">
+      <div class="ojoIzq">
+        <img src="../../assets/OjoIzqr.png" alt="">
+      </div>
+      <div class="ojoDer">
+        <img src="../../assets/OjoDer.png" alt="">
+      </div>
+    </div>
+    <div class="headerDown">
+      <div class="logoPoke">
+        <img src="../../assets/cosopoke.png" alt="">
+      </div>
+    </div>
   </div>
-</ion-content>
+  <div class="body">
+    <div class="up">
+      <div class="barraNav">
+        <ion-item>
+          <ion-input [(ngModel)]="valor" type="text" placeholder="¿Quién es ese Pokemon?"></ion-input>
+        </ion-item>
+        <ion-button (click)="getPokemonData()" shape="round"><ion-icon name="search-circle-sharp"></ion-icon></ion-button>
+      </div>
+    </div>
+    <div class="midle">
+      <div class="pantalla">
+        <ion-card class="carta">
+          <div class="imgC">
+            <ion-img [src]="pokemon.sprites.front_default"></ion-img>
+          </div>
+          <ion-card-header>
+            <ion-card-title>{{pokemon.name}}</ion-card-title>
+            <ion-card-subtitle>{{pokemon.id}}</ion-card-subtitle>
+          </ion-card-header >
+          <h1 class="tipos" *ngFor="let type of pokemon.types; index as i">{{pokemon.types[i].type.name}}</h1>
+          <ion-card-content>
+            
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <div class="down">
+      <div class="detalles">
+        <div class="detallesIzq">
+          <img src="../../assets/camarita.png" alt="">
+          <img src="../../assets/bolitaroja.png" alt="">
+          <img src="../../assets/bolitaamarilla.png" alt="">
+          <img src="../../assets/bolitaverde.png" alt="">
+        </div>
+        <div class="detallesDer">
+          <img src="../../assets/iconopokeabajo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
