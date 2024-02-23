@@ -1,0 +1,7 @@
+{
+  "name": "PokedeksFull",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
